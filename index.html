@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soham — Software Engineer &amp; Frontend Developer</title>
+  <meta name="description" content="Soham is a software engineer specializing in frontend development, UI engineering, and building fast, accessible, premium web experiences." />
+  <meta name="theme-color" content="#0b1120" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Soham — Software Engineer & Frontend Developer" />
+  <meta property="og:description" content="Portfolio showcasing frontend engineering, projects, and experience." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts: Sora for headings, Inter for body, JetBrains Mono for labels/data -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets — order matters: tokens, then base, then components, then motion, then breakpoints -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+</head>
+<body data-github-user="sohamdev">
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ================= PRELOADER ================= -->
+  <div class="preloader" aria-hidden="true">
+    <div class="preloader__mark">
+      Soham<span style="color: var(--color-primary)">.</span>dev
+      <div class="preloader__bar"></div>
+    </div>
+  </div>
+
+  <!-- ================= SCROLL PROGRESS ================= -->
+  <div class="scroll-progress" role="progressbar" aria-label="Page scroll progress" aria-hidden="true"></div>
+
+  <!-- ================= CUSTOM CURSOR ================= -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <!-- ================= HEADER / NAVBAR ================= -->
+  <header class="header">
+    <div class="container navbar">
+      <a href="#hero" class="navbar__brand">Soham<span>.</span>dev</a>
+
+      <nav class="navbar__links" aria-label="Primary">
+        <a href="#about" class="navbar__link">About</a>
+        <a href="#skills" class="navbar__link">Skills</a>
+        <a href="#experience" class="navbar__link">Experience</a>
+        <a href="#projects" class="navbar__link">Projects</a>
+        <a href="#github" class="navbar__link">GitHub</a>
+        <a href="#certificates" class="navbar__link">Certificates</a>
+        <a href="#contact" class="navbar__link">Contact</a>
+      </nav>
+
+      <div class="navbar__actions">
+        <button class="theme-toggle" data-theme-toggle aria-label="Toggle color theme" aria-pressed="false">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+          </svg>
+        </button>
+        <a href="assets/resume-soham.pdf" class="btn btn--ghost btn--sm" download>Resume</a>
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= MOBILE MENU ================= -->
+  <nav class="mobile-menu" aria-label="Mobile">
+    <a href="#about" class="mobile-menu__link">About</a>
+    <a href="#skills" class="mobile-menu__link">Skills</a>
+    <a href="#experience" class="mobile-menu__link">Experience</a>
+    <a href="#projects" class="mobile-menu__link">Projects</a>
+    <a href="#github" class="mobile-menu__link">GitHub</a>
+    <a href="#certificates" class="mobile-menu__link">Certificates</a>
+    <a href="#contact" class="mobile-menu__link">Contact</a>
+    <a href="assets/resume/Soham Chavan Resume (1).pdf" class="btn btn--primary" download>Download Resume</a>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="hero">
+      <div class="hero__mouse-glow" aria-hidden="true"></div>
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <div class="hero__badge">
+            <span class="dot"></span>
+            Available for new opportunities
+          </div>
+
+          <h1 class="hero__title">
+            Hi, I'm Soham —<br />
+            <span class="text-gradient hero__typing" data-typing data-words="Frontend Developer, UI Engineer, Problem Solver"></span>
+          </h1>
+
+          <p class="hero__desc">
+            I design and build fast, accessible, and visually refined web products —
+            from pixel-perfect interfaces to the systems that keep them scalable.
+          </p>
+
+          <div class="hero__actions">
+            <a href="#projects" class="btn btn--primary">View My Work</a>
+            <a href="#contact" class="btn btn--ghost">Get In Touch</a>
+          </div>
+
+          <div class="hero__socials">
+            <a href="https://github.com/build-with-soham" target="_blank" rel="noopener" aria-label="GitHub profile">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.1-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.69-1.28-1.69-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.2 1.77 1.2 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18.92-.26 1.9-.39 2.88-.39.98 0 1.96.13 2.88.39 2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.07.78 2.16 0 1.56-.01 2.82-.01 3.2 0 .3.2.66.79.55A10.52 10.52 0 0023.5 12c0-6.35-5.15-11.5-11.5-11.5z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/soham-sudhir-chavan-1ab755332/" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.26 2.37 4.26 5.46v6.28zM5.34 7.43a2.07 2.07 0 110-4.13 2.07 2.07 0 010 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+            </a>
+            <a href="sohamchavan368@gmail.com" aria-label="Send email">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16v16H4z" stroke="none"/><path d="M22 6l-10 7L2 6M4 4h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6a2 2 0 012-2z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <div class="hero__photo-frame">
+            <img src="assets/images/profile.png" alt="Portrait of Soham" loading="eager" />
+          </div>
+          <div class="hero__float-card hero__float-card--1">
+            <span>🟢</span> Currently building DevPortfolio Pro X
+          </div>
+          <div class="hero__float-card hero__float-card--2">
+            <span>⚡</span> Actively learning, actively building
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__scroll-indicator">
+        <span>Scroll</span>
+        <div class="wheel"></div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="section-header" data-reveal="up">
+          <span class="section-eyebrow">About Me</span>
+          <h2 class="section-title">The developer behind the code</h2>
+        </div>
+
+        <div class="grid about__grid">
+          <div data-reveal="left">
+            <p>
+              I'm a frontend-focused software engineer who cares as much about how an
+              interface feels as how it performs. My work sits at the intersection of
+              design systems, accessibility, and clean architecture.
+            </p>
+            <p style="margin-top: var(--space-4)">
+              I started building websites out of curiosity and turned it into a discipline —
+              studying how premium products like Stripe and Linear achieve their sense of
+              polish, then applying those same principles to my own builds.
+            </p>
+
+            <div class="about__stats">
+              <div class="stat-card">
+                <div class="stat-card__num counter" data-counter="2">0</div>
+                <div class="stat-card__label">Projects Completed</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-card__num counter" data-counter="0">0</div>
+                <div class="stat-card__label">Years Experience</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-card__num counter" data-counter="12">0</div>
+                <div class="stat-card__label">Technologies Used</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-card__num counter" data-counter="4">0</div>
+                <div class="stat-card__label">Certifications</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about__timeline" data-reveal="right">
+            <div class="timeline-item">
+              <div class="timeline-item__year">2026 — Present</div>
+              <h3 class="timeline-item__title">Frontend Developer</h3>
+              <p>Building production interfaces with modern JavaScript and design systems.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-item__year">2025</div>
+              <h3 class="timeline-item__title">Web Development Internship</h3>
+              <p>Shipped features end-to-end and learned to work inside a real engineering team.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-item__year">2024 — 2025</div>
+              <h3 class="timeline-item__title">Self-Taught Foundations</h3>
+              <p>Learned HTML, CSS, and JavaScript by building and rebuilding real projects.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section class="section skills" id="skills">
+      <div class="container">
+        <div class="section-header" data-reveal="up">
+          <span class="section-eyebrow">Skills</span>
+          <h2 class="section-title">Tools I build with</h2>
+          <p class="section-desc">A practical toolkit, not a buzzword list — everything below is something I've shipped with.</p>
+        </div>
+
+        <div class="skills__tabs" data-reveal="up">
+          <button class="skills__tab is-active" data-skill-category="all">All</button>
+          <button class="skills__tab" data-skill-category="frontend">Frontend</button>
+          <button class="skills__tab" data-skill-category="tools">Tools</button>
+          <button class="skills__tab" data-skill-category="soft">Soft Skills</button>
+        </div>
+
+       <div class="grid skills__grid" data-skill-group="frontend" data-reveal-group>
+  <div class="skill-card" data-reveal="up">
+    <div class="skill-card__top">
+      <span class="skill-card__name">JavaScript (ES6+)</span>
+      <span class="skill-card__pct">90%</span>
+    </div>
+    <div class="skill-card__bar"><div class="skill-card__bar-fill" data-fill="90"></div></div>
+  </div>
+  <div class="skill-card" data-reveal="up">
+    <div class="skill-card__top">
+      <span class="skill-card__name">HTML5</span>
+      <span class="skill-card__pct">95%</span>
+    </div>
+    <div class="skill-card__bar"><div class="skill-card__bar-fill" data-fill="95"></div></div>
+  </div>
+  <div class="skill-card" data-reveal="up">
+    <div class="skill-card__top">
+      <span class="skill-card__name">CSS3</span>
+      <span class="skill-card__pct">95%</span>
+    </div>
+    <div class="skill-card__bar"><div class="skill-card__bar-fill" data-fill="95"></div></div>
+  </div>
+</div><!-- ← THIS closing div was missing -->
+
+<div class="grid skills__grid" data-skill-group="tools" data-reveal-group>
+  <div class="skill-card" data-reveal="up">
+    <div class="skill-card__top">
+      <span class="skill-card__name">Git &amp; GitHub</span>
+      <span class="skill-card__pct">85%</span>
+    </div>
+    <div class="skill-card__bar"><div class="skill-card__bar-fill" data-fill="85"></div></div>
+  </div>
+  <div class="skill-card" data-reveal="up">
+    <div class="skill-card__top">
+      <span class="skill-card__name">VS Code</span>
+      <span class="skill-card__pct">70%</span>
+    </div>
+    <div class="skill-card__bar"><div class="skill-card__bar-fill" data-fill="70"></div></div>
+  </div>
+</div>
+
+        <div class="grid skills__grid" data-skill-group="soft" data-reveal-group>
+          <div class="skill-card" data-reveal="up">
+            <div class="skill-card__top">
+              <span class="skill-card__name">Communication</span>
+              <span class="skill-card__pct">88%</span>
+            </div>
+            <div class="skill-card__bar"><div class="skill-card__bar-fill" data-fill="88"></div></div>
+          </div>
+          <div class="skill-card" data-reveal="up">
+            <div class="skill-card__top">
+              <span class="skill-card__name">Problem Solving</span>
+              <span class="skill-card__pct">92%</span>
+            </div>
+            <div class="skill-card__bar"><div class="skill-card__bar-fill" data-fill="92"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EXPERIENCE ================= -->
+    <section class="section experience" id="experience">
+      <div class="container">
+        <div class="section-header" data-reveal="up">
+          <span class="section-eyebrow">Experience</span>
+          <h2 class="section-title">Where I've worked</h2>
+        </div>
+
+        <div class="experience__timeline">
+          <div class="exp-card" data-reveal="up">
+            <div class="exp-card__meta">
+              <h3 class="exp-card__role">Web Developer Intern</h3>
+              <span class="exp-card__date">March 2025</span>
+            </div>
+            <div class="exp-card__company">My Job Grow</div>
+            <ul class="exp-card__list">
+              <li>Built and maintained reusable UI components used across three product surfaces.</li>
+              <li>Improved page load performance by optimizing assets and lazy-loading routes.</li>
+              <li>Collaborated with designers to translate Figma files into pixel-accurate code.</li>
+            </ul>
+          </div>
+
+          <div class="exp-card" data-reveal="up">
+            <div class="exp-card__meta">
+              <h3 class="exp-card__role">Freelance Web Developer</h3>
+              <span class="exp-card__date">2026 — Present</span>
+            </div>
+            <div class="exp-card__company">Self-Employed</div>
+            <ul class="exp-card__list">
+              <li>Delivered custom websites for small businesses, from design to deployment.</li>
+              <li>Managed client communication, timelines, and post-launch support.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section class="section projects" id="projects">
+      <div class="container">
+        <div class="section-header" data-reveal="up">
+          <span class="section-eyebrow">Projects</span>
+          <h2 class="section-title">Things I've built</h2>
+          <p class="section-desc">A selection of projects — click any card for details.</p>
+        </div>
+
+        <div class="projects__filters" data-reveal="up">
+          <button class="filter-btn is-active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="frontend">Frontend</button>
+          <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+          <button class="filter-btn" data-filter="ui">UI / Design</button>
+        </div>
+
+        <div class="grid projects__grid" data-reveal-group>
+          <article class="project-card" data-reveal="up" data-project-card
+            data-category="frontend"
+            data-title="Task Flow — Kanban App"
+            data-description="A drag-and-drop task management app with boards, labels, and local persistence, built to explore complex state management in vanilla JS."
+            data-image="assets/images/project-taskflow.jpg"
+            data-tags="JavaScript, CSS Grid, LocalStorage"
+            data-github="https://build-with-soham.github.io/nova-ai-official/"
+            data-demo="https://taskflow.example.com">
+            <div class="project-card__media">
+              <img src="assets/images/project-taskflow.jpg" alt="Task Flow kanban app screenshot" loading="lazy" />
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+              </div>
+              <h3 class="project-card__title">🚀 AI Powered Platform</h3>
+              <p class="project-card__desc">Build Smarter with Artificial Intelligence</p>
+              <div class="project-card__links">
+                <span>View Details →</span>
+              </div>
+            </div>
+          </article>
+
+          
+
+          <article class="project-card" data-reveal="up" data-project-card
+            data-category="ui"
+            data-title="Aura — Design System"
+            data-description="A component library and design system documentation site, focused on accessible defaults and consistent spacing/typography tokens."
+            data-image="assets/images/project-aura.jpg"
+            data-tags="Figma, CSS Variables, Storybook"
+            data-github="https://github.com/sohamdev/aura-design-system"
+            data-demo="https://aura.example.com">
+            <div class="project-card__media">
+              <img src="assets/images/project-aura.jpg" alt="Aura design system screenshot" loading="lazy" />
+            </div>
+            <div class="project-card__body">
+              <div class="project-card__tags">
+                <span class="tag">Figma</span>
+                <span class="tag">Design Tokens</span>
+              </div>
+              <h3 class="project-card__title">Aura — Design System</h3>
+              <p class="project-card__desc">Component library with accessible defaults.</p>
+              <div class="project-card__links">
+                <span>View Details →</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECT MODAL ================= -->
+    <div class="modal-overlay" data-project-modal>
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title-el">
+        <button class="modal__close" data-modal-close aria-label="Close project details">✕</button>
+        <img data-modal-image src="" alt="" style="border-radius: var(--radius-md); margin-bottom: var(--space-5); aspect-ratio: 16/9; object-fit: cover; width: 100%;" />
+        <h3 id="modal-title-el" data-modal-title></h3>
+        <p style="margin: var(--space-4) 0;" data-modal-desc></p>
+        <div class="project-card__tags" data-modal-tags style="margin-bottom: var(--space-5);"></div>
+        <div class="hero__actions">
+          <a href="#" data-modal-github target="_blank" rel="noopener" class="btn btn--ghost btn--sm">View Code</a>
+          <a href="#" data-modal-demo target="_blank" rel="noopener" class="btn btn--primary btn--sm">Live Demo</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= GITHUB ================= -->
+    <section class="section github" id="github">
+      <div class="container">
+        <div class="section-header" data-reveal="up">
+          <span class="section-eyebrow">GitHub Activity</span>
+          <h2 class="section-title">Live from my GitHub</h2>
+          <p class="section-desc">Pulled directly from the GitHub API in real time.</p>
+        </div>
+
+        <div class="grid github__panel" data-github-stats data-reveal-group>
+          <div class="github-stat"><div class="github-stat__num">—</div><div class="github-stat__label">Loading…</div></div>
+          <div class="github-stat"><div class="github-stat__num">—</div><div class="github-stat__label">Loading…</div></div>
+          <div class="github-stat"><div class="github-stat__num">—</div><div class="github-stat__label">Loading…</div></div>
+          <div class="github-stat"><div class="github-stat__num">—</div><div class="github-stat__label">Loading…</div></div>
+        </div>
+
+        <div class="grid github__repos" data-github-repos data-reveal-group></div>
+      </div>
+    </section>
+
+    <!-- ================= CERTIFICATES ================= -->
+    <section class="section certificates" id="certificates">
+      <div class="container">
+        <div class="section-header" data-reveal="up">
+          <span class="section-eyebrow">Certificates</span>
+          <h2 class="section-title">Continued learning</h2>
+        </div>
+
+        <div class="grid certs__grid" data-reveal-group>
+          <div class="cert-card" data-reveal="up">
+            <div class="cert-card__issuer">Meta · Coursera</div>
+            <h3 class="cert-card__title">Meta Front-End Developer Professional Certificate</h3>
+            <div class="cert-card__date">Issued 2023</div>
+            <a href="#" target="_blank" rel="noopener" class="btn btn--ghost btn--sm">Verify</a>
+          </div>
+          <div class="cert-card" data-reveal="up">
+            <div class="cert-card__issuer">freeCodeCamp</div>
+            <h3 class="cert-card__title">JavaScript Algorithms and Data Structures</h3>
+            <div class="cert-card__date">Issued 2022</div>
+            <a href="#" target="_blank" rel="noopener" class="btn btn--ghost btn--sm">Verify</a>
+          </div>
+          <div class="cert-card" data-reveal="up">
+            <div class="cert-card__issuer">Google</div>
+            <h3 class="cert-card__title">UX Design Professional Certificate</h3>
+            <div class="cert-card__date">Issued 2023</div>
+            <a href="#" target="_blank" rel="noopener" class="btn btn--ghost btn--sm">Verify</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="section-header" data-reveal="up">
+          <span class="section-eyebrow">Contact</span>
+          <h2 class="section-title">Let's work together</h2>
+          <p class="section-desc">Have a project in mind or just want to say hi? My inbox is open.</p>
+        </div>
+
+        <div class="grid contact__grid">
+          <div data-reveal="left">
+            <div class="contact__info-item">
+              <div class="contact__info-icon">✉</div>
+              <div>
+                <div class="contact__info-label">Email</div>
+                <div class="contact__info-value">sohamchavan368@gmail.com</div>
+              </div>
+            </div>
+            <div class="contact__info-item">
+              <div class="contact__info-icon">📍</div>
+              <div>
+                <div class="contact__info-label">Location</div>
+                <div class="contact__info-value">Pune, Maharashtra, India</div>
+              </div>
+            </div>
+            <div class="contact__info-item">
+              <div class="contact__info-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.1-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.69-1.28-1.69-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.2 1.77 1.2 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18.92-.26 1.9-.39 2.88-.39.98 0 1.96.13 2.88.39 2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.07.78 2.16 0 1.56-.01 2.82-.01 3.2 0 .3.2.66.79.55A10.52 10.52 0 0023.5 12c0-6.35-5.15-11.5-11.5-11.5z"/></svg></div>
+              <div>
+                <div class="contact__info-label">GitHub</div>
+                <div class="contact__info-value">https://github.com/build-with-soham</div>
+              </div>
+            </div>
+            <div class="contact__info-item" style="border-bottom: none;">
+              <div class="contact__info-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.26 2.37 4.26 5.46v6.28zM5.34 7.43a2.07 2.07 0 110-4.13 2.07 2.07 0 010 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></div>
+              <div>
+                <div class="contact__info-label">LinkedIn</div>
+                <div class="contact__info-value">https://www.linkedin.com/in/soham-sudhir-chavan-1ab755332/</div>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form" data-contact-form data-reveal="right" novalidate>
+            <div class="form-group--row">
+              <div class="form-group">
+                <label class="form-label" for="name">Full Name</label>
+                <input class="form-input" type="text" id="name" name="name" placeholder="Your name" required />
+                <span class="form-error"></span>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="email">Email Address</label>
+                <input class="form-input" type="email" id="email" name="email" placeholder="you@example.com" required />
+                <span class="form-error"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="subject">Subject</label>
+              <input class="form-input" type="text" id="subject" name="subject" placeholder="What's this about?" required />
+              <span class="form-error"></span>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="message">Message</label>
+              <textarea class="form-textarea" id="message" name="message" placeholder="Tell me a bit about your project..." required></textarea>
+              <span class="form-error"></span>
+            </div>
+            <button type="submit" class="btn btn--primary" data-form-submit style="width: 100%;">Send Message</button>
+            <div class="form-status" data-form-status role="status"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div>
+          <a href="#hero" class="navbar__brand">Soham<span>.</span>dev</a>
+          <p class="footer__brand-desc">
+            Building fast, accessible, and premium web experiences —
+            one thoughtful detail at a time.
+          </p>
+        </div>
+
+        <div class="footer__links">
+          <div class="footer__col">
+            <div class="footer__col-title">Navigate</div>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <div class="footer__col">
+            <div class="footer__col-title">Resources</div>
+            <a href="assets/resume/Soham Chavan Resume (1).pdf" download>Resume</a>
+            <a href="#certificates">Certificates</a>
+            <a href="https://github.com/build-with-soham" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>© <span data-current-year></span> Soham. Made with ❤️ by Soham.</p>
+        <div class="footer__socials">
+          <a href="https://github.com/build-with-soham" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55 0-.27-.01-1.16-.02-2.1-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.69-1.28-1.69-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.2 1.77 1.2 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18.92-.26 1.9-.39 2.88-.39.98 0 1.96.13 2.88.39 2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.69 5.4-5.25 5.68.41.36.78 1.07.78 2.16 0 1.56-.01 2.82-.01 3.2 0 .3.2.66.79.55A10.52 10.52 0 0023.5 12c0-6.35-5.15-11.5-11.5-11.5z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/soham-sudhir-chavan-1ab755332/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.26 2.37 4.26 5.46v6.28zM5.34 7.43a2.07 2.07 0 110-4.13 2.07 2.07 0 010 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= BACK TO TOP ================= -->
+  <button class="back-to-top" aria-label="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <path d="M12 19V5M5 12l7-7 7 7" />
+    </svg>
+  </button>
+
+  <!-- EmailJS CDN — used by js/contact.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <!-- Scripts — order matters: main orchestrates, feature modules self-init -->
+  <script src="js/theme.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/typing.js"></script>
+  <script src="js/scroll.js"></script>
+  <script src="js/github.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

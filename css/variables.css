@@ -1,0 +1,117 @@
+/* ==========================================================================
+   DevPortfolio Pro X — Design Tokens
+   Single source of truth. Every other stylesheet references these variables
+   instead of hardcoding values. Change a token here, change it everywhere.
+   ========================================================================== */
+
+:root {
+  /* ---------- Color: Brand ---------- */
+  --color-primary: #635bff;
+  --color-primary-hover: #7a73ff;
+  --color-primary-rgb: 99, 91, 255;
+  --color-secondary: #00c2ff;
+  --color-secondary-rgb: 0, 194, 255;
+
+  /* ---------- Color: Surface ---------- */
+  --color-bg: #0b1120;
+  --color-bg-elevated: #0d1424;
+  --color-surface: #111827;
+  --color-surface-hover: #161f34;
+  --color-border: #1e293b;
+  --color-border-strong: #2a3a52;
+
+  /* ---------- Color: Text ---------- */
+  --color-text-primary: #f8fafc;
+  --color-text-secondary: #94a3b8;
+  --color-text-muted: #64748b;
+
+  /* ---------- Color: Status ---------- */
+  --color-success: #22c55e;
+  --color-danger: #ef4444;
+  --color-warning: #f59e0b;
+
+  /* ---------- Gradients ---------- */
+  --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  --gradient-glow: radial-gradient(circle at 50% 0%, rgba(var(--color-primary-rgb), 0.25) 0%, transparent 60%);
+  --gradient-text: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
+
+  /* ---------- Typography ---------- */
+  --font-heading: "Sora", "Segoe UI", sans-serif;
+  --font-body: "Inter", "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", "Courier New", monospace;
+
+  /* Fluid type scale — clamp(min, preferred, max) */
+  --fs-xs: clamp(0.75rem, 0.72rem + 0.15vw, 0.8125rem);
+  --fs-sm: clamp(0.875rem, 0.84rem + 0.18vw, 0.9375rem);
+  --fs-base: clamp(1rem, 0.96rem + 0.2vw, 1.0625rem);
+  --fs-md: clamp(1.125rem, 1.06rem + 0.3vw, 1.25rem);
+  --fs-lg: clamp(1.375rem, 1.25rem + 0.6vw, 1.75rem);
+  --fs-xl: clamp(1.75rem, 1.5rem + 1.2vw, 2.5rem);
+  --fs-2xl: clamp(2.25rem, 1.8rem + 2vw, 3.5rem);
+  --fs-3xl: clamp(2.75rem, 2rem + 3.2vw, 4.75rem);
+
+  --lh-tight: 1.1;
+  --lh-snug: 1.3;
+  --lh-normal: 1.6;
+  --lh-relaxed: 1.8;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* ---------- Spacing scale (8px base) ---------- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-10: 8rem;
+
+  /* ---------- Layout ---------- */
+  --container-max: 1280px;
+  --container-padding: clamp(1.25rem, 4vw, 3rem);
+  --header-height: 76px;
+
+  /* ---------- Radius ---------- */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 999px;
+
+  /* ---------- Shadow ---------- */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.24);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.32);
+  --shadow-lg: 0 20px 48px rgba(0, 0, 0, 0.4);
+  --shadow-glow: 0 0 40px rgba(var(--color-primary-rgb), 0.25);
+
+  /* ---------- Motion ---------- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 150ms;
+  --dur-base: 300ms;
+  --dur-slow: 600ms;
+
+  /* ---------- Z-index scale ---------- */
+  --z-cursor: 9999;
+  --z-preloader: 9998;
+  --z-header: 900;
+  --z-modal: 950;
+  --z-progress: 901;
+}
+
+/* Respect reduced-motion preference site-wide */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

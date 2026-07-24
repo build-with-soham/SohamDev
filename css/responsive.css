@@ -1,0 +1,131 @@
+/* ==========================================================================
+   DevPortfolio Pro X — Responsive
+   Breakpoints: Mobile 320-767 | Tablet 768-1023 | Laptop 1024-1439 | Desktop 1440+
+   Mobile-first base lives in components.css; this file overrides upward AND
+   downward from the laptop baseline so one HTML file adapts everywhere.
+   ========================================================================== */
+
+/* ---------- Laptop and below (<1440px): tighten desktop-only excess ---------- */
+@media (max-width: 1439px) {
+  .github__panel {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ---------- Tablet and below (<1024px) ---------- */
+@media (max-width: 1023px) {
+  .navbar__links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .hero__grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero__desc {
+    margin-inline: auto;
+  }
+
+  .hero__actions,
+  .hero__socials {
+    justify-content: center;
+  }
+
+  .hero__visual {
+    order: -1;
+  }
+
+  .hero__float-card--1,
+  .hero__float-card--2 {
+    display: none;
+  }
+
+  .about__grid,
+  .contact__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-group--row {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__top {
+    flex-direction: column;
+  }
+
+  /* Custom cursor is a desktop-precision-pointer feature only */
+  .cursor-dot,
+  .cursor-ring {
+    display: none;
+  }
+}
+
+/* ---------- Mobile (<768px) ---------- */
+@media (max-width: 767px) {
+  :root {
+    --header-height: 68px;
+  }
+
+  .section {
+    padding-block: var(--space-8);
+  }
+
+  .hero {
+    min-height: auto;
+    padding-bottom: var(--space-9);
+  }
+
+  .hero__title {
+    font-size: var(--fs-2xl);
+  }
+
+  .about__stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .skills__grid,
+  .projects__grid,
+  .certs__grid,
+  .github__repos {
+    grid-template-columns: 1fr;
+  }
+
+  .github__panel {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .exp-card {
+    padding: var(--space-5);
+  }
+
+  .modal {
+    padding: var(--space-5);
+  }
+
+  .back-to-top {
+    bottom: var(--space-4);
+    right: var(--space-4);
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* ---------- Small mobile (<400px) ---------- */
+@media (max-width: 399px) {
+  .hero__badge {
+    font-size: 0.65rem;
+  }
+
+  .about__stats {
+    grid-template-columns: 1fr;
+  }
+
+  .github__panel {
+    grid-template-columns: 1fr;
+  }
+}
